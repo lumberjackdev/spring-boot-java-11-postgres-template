@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: auth-api
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_app?currentSchema=auth
+    username: auth-api
+    password: change_me
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 60000
+      validation-timeout: 60000
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database: postgresql
+    properties:
+      hibernate:
+        jdbc:
+          lob.non_contextual_creation: true
