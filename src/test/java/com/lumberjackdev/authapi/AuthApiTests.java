@@ -1,10 +1,10 @@
-package com.lumberjackdev.java11authapi;
+package com.lumberjackdev.authapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Java11authapiApplicationTests {
+class AuthApiTests {
 
 	@Test
 	void contextLoads() {

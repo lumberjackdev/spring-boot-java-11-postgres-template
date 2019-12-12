@@ -1,13 +1,13 @@
-package com.lumberjackdev.java11authapi;
+package com.lumberjackdev.authapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Java11authapiApplication {
+public class AuthApi {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Java11authapiApplication.class, args);
+		SpringApplication.run(AuthApi.class, args);
 	}
 
 }
