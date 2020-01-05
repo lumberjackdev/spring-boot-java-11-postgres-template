@@ -2,12 +2,12 @@ version: '3'
 
 services:
   db:
-    container_name: auth-postgres
+    container_name: postgres
     image: postgres
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: "auth-api"
+      POSTGRES_USER: "app_user"
       POSTGRES_PASSWORD: "change_me"
       POSTGRES_DB: "demo_app"
     volumes:
