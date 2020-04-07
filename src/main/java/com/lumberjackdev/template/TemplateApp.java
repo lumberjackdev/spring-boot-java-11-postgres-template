@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.MapPropertySource;
 import org.springframework.util.CollectionUtils;
 import org.testcontainers.containers.PostgreSQLContainer;
@@ -31,24 +32,4 @@ public class TemplateApp {
 	private static boolean shouldStartContainers(String... args) {
 		return Arrays.asList(args).contains("start.containers");
 	}
-
-	static class ContainerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
-		static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>();
-
-		public static Map<String, Object> getProperties() {
-			Startables.deepStart(List.of(postgres)).join();
-			return Map.of(
-					"spring.datasource.url", postgres.getJdbcUrl(),
-					"spring.datasource.username", postgres.getUsername(),
-					"spring.datasource.password",postgres.getPassword()
-			);
-		}
-
-		@Override
-		public void initialize(ConfigurableApplicationContext context) {
-			var env = context.getEnvironment();
-			env.getPropertySources().addFirst(new MapPropertySource("testcontainers", getProperties()));
-		}
-	}
-
 }
