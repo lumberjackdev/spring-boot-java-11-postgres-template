@@ -23,7 +23,7 @@ dependencies {
     implementation 'org.testcontainers:testcontainers:1.14.3'
     implementation 'org.testcontainers:postgresql:1.14.3'
 
-    compileOnly 'org.projectlombok:lombok:1.18.14'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
     annotationProcessor 'org.projectlombok:lombok:1.18.14'
 
     runtimeOnly 'org.postgresql:postgresql'
