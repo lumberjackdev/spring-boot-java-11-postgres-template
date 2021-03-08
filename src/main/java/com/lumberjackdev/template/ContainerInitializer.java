@@ -3,7 +3,6 @@ package com.lumberjackdev.template;
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.MapPropertySource;
-import org.testcontainers.containers.BindMode;
 import org.testcontainers.containers.GenericContainer;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.lifecycle.Startables;
@@ -12,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ContainerInitializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
-    private static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>()
+    private static final PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>()
             .withReuse(true);
 
     @Override
