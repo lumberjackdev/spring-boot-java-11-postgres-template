@@ -21,7 +21,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
     implementation 'org.testcontainers:testcontainers:1.15.2'
-    implementation 'org.testcontainers:postgresql:1.15.2'
+    implementation 'org.testcontainers:postgresql:1.15.3'
 
     compileOnly 'org.projectlombok:lombok:1.18.18'
     annotationProcessor 'org.projectlombok:lombok:1.18.18'
