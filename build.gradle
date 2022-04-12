@@ -20,7 +20,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
-    implementation 'org.testcontainers:testcontainers:1.16.3'
+    implementation 'org.testcontainers:testcontainers:1.17.0'
     implementation 'org.testcontainers:postgresql:1.16.2'
 
     compileOnly 'org.projectlombok:lombok:1.18.22'
