@@ -32,7 +32,7 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'org.testcontainers:junit-jupiter:1.17.2'
+    testImplementation 'org.testcontainers:junit-jupiter:1.17.3'
 }
 
 test {
